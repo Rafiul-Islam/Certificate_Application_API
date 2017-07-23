@@ -1,0 +1,7 @@
+##Certificate_Application##
+
+table name : application_procedure
+
+column 1: certificate_type --- Provisional, Original, Marks,Duplicate
+column 2: user_Id --1510676120
+column 3: payment --300

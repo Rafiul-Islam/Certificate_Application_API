@@ -1,0 +1,107 @@
+HOST: http://localhost:3000/application_procedures
+
+# Certificate_Application
+
+Certificate_Application is a simple API .I have just done a part of this API, which is process that describes details about the application procedure for  certificate which includes course certificate type, user id and payment. This information can be updated or deleted .
+
+## Questions Collection [/questions]
+
+### List All Student Info [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+        "id": 1,
+        "certificate_type": "Orginal",
+        "user_id": "1510676120",
+        "payment": "300/-",
+        "created_at": "2017-07-23T10:25:59.281Z",
+        "updated_at": "2017-07-23T10:25:59.281Z"
+            }
+        ]
+        
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: localhost:3000/application_procedures/7
+
+    + Body
+
+            {
+                "certificate_type": "Provisional",
+                "user_id": "1510676120",
+                "payment": "300/-"
+            }
+
+### Create a Student Info [POST]
+
+The user can add new record using this action.
+
++ Request (application/json)
+
+        {
+            "id": 7,
+            "certificate_type": "Provisional",
+            "user_id": "1510676120",
+            "payment": "300/-",
+            "created_at": "2017-07-23T17:50:22.736Z",
+            "updated_at": "2017-07-23T17:50:22.736Z"
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: localhost:3000/application_procedures
+
+    + Body
+
+            {
+                "certificate_type": "Provisional",
+                "user_id": "1510676120",
+                "payment": "300"
+            }
+            
+            
+### Update a Student Info [PUT]
+
+The user can update new record using this action.
+
++ Request (application/json)
+
+        {
+            "id": 7,
+            "certificate_type": "Mark",
+            "user_id": "1510676120",
+            "payment": "200",
+            "created_at": "2017-07-23T17:50:22.736Z",
+            "updated_at": "2017-07-23T18:09:48.551Z"
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: localhost:3000/application_procedures/7
+
+    + Body
+
+            {
+                "certificate_type": "Mark",
+                "user_id": "1510676120",
+                "payment": "200"
+            }
+            
+### Delete a Student Info [DELETE]
+
+The user can delete a record using this action.
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: localhost:3000/application_procedures/7
+
+
