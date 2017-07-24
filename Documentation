@@ -4,9 +4,9 @@ HOST: http://localhost:3000/application_procedures
 
 Certificate_Application is a simple API .I have just done a part of this API, which is process that describes details about the application procedure for  certificate which includes course certificate type, user id and payment. This information can be updated or deleted .
 
-## Questions Collection [/questions]
+## Questions Collection [/]
 
-### List All Student Info [GET]
+### List of All Student Info [GET]
 
 + Response 200 (application/json)
 
@@ -35,7 +35,7 @@ Certificate_Application is a simple API .I have just done a part of this API, wh
                 "payment": "300/-"
             }
 
-### Create a Student Info [POST]
+### Add A Student Info [POST]
 
 The user can add new record using this action.
 
@@ -50,7 +50,7 @@ The user can add new record using this action.
             "updated_at": "2017-07-23T17:50:22.736Z"
         }
 
-+ Response 201 (application/json)
++ Response 202 (application/json)
 
     + Headers
 
@@ -65,7 +65,7 @@ The user can add new record using this action.
             }
             
             
-### Update a Student Info [PUT]
+### Update A Student Info [PUT]
 
 The user can update new record using this action.
 
@@ -80,7 +80,7 @@ The user can update new record using this action.
             "updated_at": "2017-07-23T18:09:48.551Z"
         }
 
-+ Response 201 (application/json)
++ Response 203 (application/json)
 
     + Headers
 
@@ -94,11 +94,11 @@ The user can update new record using this action.
                 "payment": "200"
             }
             
-### Delete a Student Info [DELETE]
+### Delete A Student Info [DELETE]
 
 The user can delete a record using this action.
 
-+ Response 201 (application/json)
++ Response 204 (application/json)
 
     + Headers
 
